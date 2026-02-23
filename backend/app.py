@@ -53,6 +53,10 @@ def init_db():
     conn.close()
 
 
+# קריאה ל-init_db בטעינת המודול — עובד גם עם gunicorn
+init_db()
+
+
 # ─── Auth ────────────────────────────────────────────────
 
 @app.route('/api/auth/register', methods=['POST'])
